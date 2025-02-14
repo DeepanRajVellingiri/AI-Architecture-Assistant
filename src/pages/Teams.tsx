@@ -8,7 +8,7 @@ const teamMembers = [
     role: 'Azure/AWS Cloud Engineer',
     description: 'Microsoft Security Researcher',
     linkedin: 'url.com',
-    image: '/assets/deepan.jpg'
+    image: 'DEEPAN1.jpg'
   },
   {
     name: 'Murugan Subramanian',
