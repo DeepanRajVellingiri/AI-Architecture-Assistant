@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="/assets/tech-animation.gif"
+          src="/tech-animation.gif"
           alt="Technology Animation"
           className="w-full h-full object-cover opacity-20"
           style={{ objectPosition: 'center' }}
