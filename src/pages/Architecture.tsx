@@ -105,8 +105,93 @@ const Architecture = () => {
           </div>
         </motion.div>
 
-        {/* Problem Statement */}
+        {/* Components Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {architectureComponents.map((component, index) => (
+            <motion.div
+              key={component.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-xl group-hover:opacity-75 transition-opacity duration-300" />
+              <div className="relative p-6 bg-black/40 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg bg-gradient-to-r ${component.color}`}>
+                    <component.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="ml-4 text-xl font-semibold text-white">{component.title}</h3>
+                </div>
+                <p className="text-gray-300">{component.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Deployment Steps */}
         <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-black/20 backdrop-blur-sm rounded-lg p-8 border border-blue-500/20"
+        >
+          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Deployment Process</h2>
+          <div className="space-y-6">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
+                  <span className="text-white font-semibold">1</span>
+                </div>
+              </div>
+              <div className="ml-4">
+                <h3 className="text-lg font-medium text-white">Prerequisites</h3>
+                <ul className="mt-2 text-gray-300 list-disc list-inside">
+                  <li>Azure subscription</li>
+                  <li>Azure CLI or Azure PowerShell</li>
+                  <li>Code editor (e.g., Visual Studio Code)</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
+                  <span className="text-white font-semibold">2</span>
+                </div>
+              </div>
+              <div className="ml-4">
+                <h3 className="text-lg font-medium text-white">Resource Creation</h3>
+                <ul className="mt-2 text-gray-300 list-disc list-inside">
+                  <li>Create Azure Web App and configure settings</li>
+                  <li>Set up Azure Storage and databases</li>
+                  <li>Configure Azure CDN and Load Balancer</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
+                  <span className="text-white font-semibold">3</span>
+                </div>
+              </div>
+              <div className="ml-4">
+                <h3 className="text-lg font-medium text-white">Deployment</h3>
+                <ul className="mt-2 text-gray-300 list-disc list-inside">
+                  <li>Deploy application code</li>
+                  <li>Configure monitoring and alerts</li>
+                  <li>Verify deployment and test functionality</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+                {/* Problem Statement */}
+                <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -247,91 +332,7 @@ const Architecture = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Components Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {architectureComponents.map((component, index) => (
-            <motion.div
-              key={component.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{
-                scale: 1.02,
-                transition: { duration: 0.2 },
-              }}
-              className="relative group"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-xl group-hover:opacity-75 transition-opacity duration-300" />
-              <div className="relative p-6 bg-black/40 backdrop-blur-sm rounded-lg border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${component.color}`}>
-                    <component.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="ml-4 text-xl font-semibold text-white">{component.title}</h3>
-                </div>
-                <p className="text-gray-300">{component.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Deployment Steps */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-black/20 backdrop-blur-sm rounded-lg p-8 border border-blue-500/20"
-        >
-          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Deployment Process</h2>
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
-                  <span className="text-white font-semibold">1</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-lg font-medium text-white">Prerequisites</h3>
-                <ul className="mt-2 text-gray-300 list-disc list-inside">
-                  <li>Azure subscription</li>
-                  <li>Azure CLI or Azure PowerShell</li>
-                  <li>Code editor (e.g., Visual Studio Code)</li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
-                  <span className="text-white font-semibold">2</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-lg font-medium text-white">Resource Creation</h3>
-                <ul className="mt-2 text-gray-300 list-disc list-inside">
-                  <li>Create Azure Web App and configure settings</li>
-                  <li>Set up Azure Storage and databases</li>
-                  <li>Configure Azure CDN and Load Balancer</li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
-                  <span className="text-white font-semibold">3</span>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-lg font-medium text-white">Deployment</h3>
-                <ul className="mt-2 text-gray-300 list-disc list-inside">
-                  <li>Deploy application code</li>
-                  <li>Configure monitoring and alerts</li>
-                  <li>Verify deployment and test functionality</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </div>
   );
