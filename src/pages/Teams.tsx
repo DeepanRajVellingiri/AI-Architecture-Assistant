@@ -6,8 +6,9 @@ const teamMembers = [
   {
     name: 'DeepanRaj Vellingiri',
     role: 'Azure/AWS Cloud Engineer',
-    description: 'Microsoft Security Researcher',
-    linkedin: 'url.com',
+    description: 'Microsoft Security Researcher CVE- CVE-2021-24113 ',
+    linkedin: 'https://www.linkedin.com/in/deepanraj95/',
+    Portfolio: 'https://deepantechnoids.github.io/',
     image: 'DEEPAN1.jpg'
   },
   {
