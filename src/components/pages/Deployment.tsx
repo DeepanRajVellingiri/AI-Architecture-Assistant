@@ -14,6 +14,7 @@ import {
   Rocket,
   ArrowRight,
 } from 'lucide-react';
+import PageHeader from '../assets/common/PageHeader';
 
 const deploymentSteps = [
   {
@@ -89,19 +90,10 @@ const Deployment = () => {
   return (
     <div className="min-h-screen pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
-            Deployment Guide
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Step-by-step instructions for deploying your application to Azure
-          </p>
-        </motion.div>
+        <PageHeader
+          title="Deployment Guide"
+          description="Step-by-step instructions for deploying your application to Azure"
+        />
 
         {/* Quick Start */}
         <motion.div

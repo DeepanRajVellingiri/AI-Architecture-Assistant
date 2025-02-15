@@ -1,9 +1,9 @@
 import React from 'react';
-import Hero from '../home/Hero';
-import Features from '../home/Features';
+import Hero from '../assets/home/Hero';
+import Features from '../assets/home/Features';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code2, Database, Gauge, Workflow } from 'lucide-react';
-import PageHeader from '../common/PageHeader';
+import PageHeader from '../assets/common/PageHeader';
 
 const Home = () => {
   return (

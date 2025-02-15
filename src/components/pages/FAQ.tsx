@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HelpCircle, Plus, Minus } from 'lucide-react';
 import { useState } from 'react';
-import PageHeader from '../components/common/PageHeader';
+import PageHeader from '../assets/common/PageHeader';
+import TryApplicationButton from '../common/TryApplicationButton';
 
 const faqs = [
   {
@@ -94,39 +95,9 @@ const FAQ = () => {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <motion.a
-            href="https://accndemo.azurewebsites.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
-              textShadow: "0 0 8px rgba(255,255,255,0.5)"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Try the Application Now
-            <motion.div
-              className="ml-2"
-              animate={{
-                x: [0, 4, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-              }}
-            >
-              →
-            </motion.div>
-          </motion.a>
-        </motion.div>
+        <div className="mt-16 text-center">
+          <TryApplicationButton />
+        </div>
       </div>
     </div>
   );

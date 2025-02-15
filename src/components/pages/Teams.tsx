@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Mail } from 'lucide-react';
+import PageHeader from '../assets/common/PageHeader';
 
 const teamMembers = [
   {
@@ -24,19 +25,10 @@ const Teams = () => {
   return (
     <div className="min-h-screen pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
-            Our Team
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Meet the experts behind AI Architecture Assistant
-          </p>
-        </motion.div>
+        <PageHeader
+          title="Our Team"
+          description="Meet the experts behind AI Architecture Assistant"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {teamMembers.map((member, index) => (
@@ -64,7 +56,7 @@ const Teams = () => {
                     <p className="text-gray-300">{member.description}</p>
                     <div className="mt-2 flex space-x-3">
                       <a
-                        href={`https://${member.linkedin}`}
+                        href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:text-blue-400 transition-colors"

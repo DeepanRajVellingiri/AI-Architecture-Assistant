@@ -74,30 +74,16 @@ const Hero = () => {
               className="w-full sm:w-auto relative group"
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-200"></div>
-              <motion.a
+              <a
                 href="https://accndemo.azurewebsites.net/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg leading-none hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200"
-                whileHover={{
-                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
-                  textShadow: "0 0 8px rgba(255,255,255,0.5)"
-                }}
-                animate={{
-                  background: ["linear-gradient(to right, #2563eb, #7c3aed)", "linear-gradient(to right, #7c3aed, #2563eb)"],
-                }}
-                transition={{
-                  background: {
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse"
-                  }
-                }}
               >
                 Try the Application
                 <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-600/50 to-purple-600/50 opacity-0 group-hover:opacity-20 transition-opacity duration-200"></div>
-              </motion.a>
+              </a>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
