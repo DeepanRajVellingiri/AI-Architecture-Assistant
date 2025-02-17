@@ -19,7 +19,7 @@ const teamMembers = [
     role: 'Developer Lead',
     description: 'Azure - IAC',
     linkedin: 'https://www.linkedin.com',
-    image: ''
+    image: 'https://github.com/user-attachments/assets/f02e40fc-1087-408a-a2d4-a5ccb203161e)'
   }
 ];
 
