@@ -110,7 +110,7 @@ const designFeatures = [
 
 const roadmap = [
   {
-    quarter: "Q2 2024",
+    quarter: "Q2 2025",
     features: [
       "Voice Command Integration",
       "Real-time Cost Tracking Dashboard",
@@ -119,7 +119,7 @@ const roadmap = [
     ]
   },
   {
-    quarter: "Q3 2024",
+    quarter: "Q3 2025",
     features: [
       "Multi-cloud Cost Comparison",
       "Advanced Security Analysis",
@@ -128,7 +128,7 @@ const roadmap = [
     ]
   },
   {
-    quarter: "Q4 2024",
+    quarter: "Q4 2025",
     features: [
       "AI-Powered Performance Optimization",
       "Automated Documentation Generation",
@@ -137,7 +137,7 @@ const roadmap = [
     ]
   },
   {
-    quarter: "Q1 2025",
+    quarter: "Q1 2026",
     features: [
       "Predictive Cost Analysis",
       "Advanced Compliance Checking",
@@ -359,7 +359,7 @@ const Architecture = () => {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Product Roadmap 2024-2025</h2>
+          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Product Roadmap 2025-2026</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {roadmap.map((quarter) => (
               <div key={quarter.quarter} className="relative group">
