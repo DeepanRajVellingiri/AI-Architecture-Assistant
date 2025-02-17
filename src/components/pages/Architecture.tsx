@@ -16,11 +16,7 @@ import {
   Sparkles,
   Code,
   Palette,
-  Lock,
   Smartphone,
-  GitBranch,
-  Mic,
-  LineChart,
 } from 'lucide-react';
 import PageHeader from '../assets/common/PageHeader';
 
@@ -359,7 +355,7 @@ const Architecture = () => {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Product Roadmap 2025-2026</h2>
+            <h2 className="text-2xl font-semibold text-white mb-8 text-center">Product Roadmap 2025-2026</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {roadmap.map((quarter) => (
               <div key={quarter.quarter} className="relative group">
