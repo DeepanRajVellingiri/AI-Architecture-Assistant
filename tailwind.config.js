@@ -21,6 +21,15 @@ export default {
           '2xl': '6rem',
         },
       },
+      animation: {
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        glow: {
+          '0%': { opacity: 0.3 },
+          '100%': { opacity: 0.6 },
+        },
+      },
     },
   },
   plugins: [],

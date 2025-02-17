@@ -13,6 +13,14 @@ import {
   TrendingUp,
   DollarSign,
   Target,
+  Sparkles,
+  Code,
+  Palette,
+  Lock,
+  Smartphone,
+  GitBranch,
+  Mic,
+  LineChart,
 } from 'lucide-react';
 import PageHeader from '../assets/common/PageHeader';
 
@@ -65,6 +73,78 @@ const architectureComponents = [
     description: 'Distributes incoming traffic across multiple web app instances for scalability.',
     color: 'from-blue-500 to-indigo-500',
   },
+  {
+    title: 'Google Gemini API',
+    icon: Sparkles,
+    description: 'Leverages advanced AI capabilities for intelligent architecture design and optimization recommendations.',
+    color: 'from-emerald-500 to-teal-500',
+  },
+];
+
+const techStack = [
+  {
+    category: "Frontend",
+    items: [
+      { name: "React with TypeScript", description: "Type-safe component development" },
+      { name: "Tailwind CSS", description: "Utility-first styling framework" },
+      { name: "Three.js & React Three Fiber", description: "3D visualization capabilities" },
+      { name: "Mermaid.js", description: "Diagram generation" },
+    ]
+  },
+  {
+    category: "AI & Integration",
+    items: [
+      { name: "Google AI (Gemini Pro)", description: "Advanced AI capabilities" },
+      { name: "Azure AD", description: "Secure authentication" },
+      { name: "PPTX & PDF Export", description: "Document generation" },
+    ]
+  }
+];
+
+const designFeatures = [
+  { icon: Smartphone, name: "Responsive Layout", description: "Optimized for all screen sizes" },
+  { icon: Palette, name: "Modern UI", description: "Clean and professional interface" },
+  { icon: Zap, name: "Interactive Elements", description: "Dynamic components and animations" },
+  { icon: Shield, name: "Accessibility", description: "WCAG compliant design" },
+];
+
+const roadmap = [
+  {
+    quarter: "Q2 2024",
+    features: [
+      "Voice Command Integration",
+      "Real-time Cost Tracking Dashboard",
+      "Enhanced AI Recommendations",
+      "Dark Mode Support"
+    ]
+  },
+  {
+    quarter: "Q3 2024",
+    features: [
+      "Multi-cloud Cost Comparison",
+      "Advanced Security Analysis",
+      "Team Collaboration Features",
+      "Custom Template Library"
+    ]
+  },
+  {
+    quarter: "Q4 2024",
+    features: [
+      "AI-Powered Performance Optimization",
+      "Automated Documentation Generation",
+      "Integration with Popular DevOps Tools",
+      "Enhanced Visualization Options"
+    ]
+  },
+  {
+    quarter: "Q1 2025",
+    features: [
+      "Predictive Cost Analysis",
+      "Advanced Compliance Checking",
+      "Real-time Architecture Validation",
+      "Extended API Ecosystem"
+    ]
+  }
 ];
 
 const Architecture = () => {
@@ -88,10 +168,9 @@ const Architecture = () => {
           <div className="relative aspect-video rounded-lg overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
             <img
-              src="/architecture-animation.gif"
+              src=""
               alt="Azure Architecture Animation"
-              className="w-full h-full object-cover rounded-lg"
-              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              className="w-full h-full object-contain rounded-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
@@ -226,6 +305,78 @@ const Architecture = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Technology Stack */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 p-8 bg-black/20 backdrop-blur-sm rounded-lg border border-blue-500/20"
+        >
+          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Technology Stack</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {techStack.map((section) => (
+              <div key={section.category}>
+                <h3 className="text-xl font-semibold text-blue-400 mb-4">{section.category}</h3>
+                <div className="space-y-4">
+                  {section.items.map((item) => (
+                    <div key={item.name} className="flex items-start">
+                      <Code className="h-5 w-5 text-blue-500 mt-1 mr-3" />
+                      <div>
+                        <h4 className="text-white font-medium">{item.name}</h4>
+                        <p className="text-gray-300 text-sm">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Design Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {designFeatures.map((feature) => (
+            <div key={feature.name} className="p-6 bg-black/20 backdrop-blur-sm rounded-lg border border-blue-500/20">
+              <feature.icon className="h-8 w-8 text-blue-500 mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">{feature.name}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Roadmap */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Product Roadmap 2024-2025</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {roadmap.map((quarter) => (
+              <div key={quarter.quarter} className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-xl group-hover:opacity-75 transition-opacity duration-300" />
+                <div className="relative p-6 bg-black/40 backdrop-blur-sm rounded-lg border border-blue-500/20 h-full">
+                  <h3 className="text-xl font-semibold text-blue-400 mb-4">{quarter.quarter}</h3>
+                  <ul className="space-y-3">
+                    {quarter.features.map((feature) => (
+                      <li key={feature} className="flex items-start text-gray-300">
+                        <Sparkles className="h-5 w-5 text-blue-500 mr-2 mt-1 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

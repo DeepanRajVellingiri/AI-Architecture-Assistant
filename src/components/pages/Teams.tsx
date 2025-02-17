@@ -1,23 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, Youtube, Github, Globe } from 'lucide-react';
 import PageHeader from '../assets/common/PageHeader';
 
 const teamMembers = [
   {
     name: 'DeepanRaj Vellingiri',
     role: 'Azure/AWS Cloud Engineer',
-    description: 'Microsoft Security Researcher CVE-2021-24113 ',
+    description: 'Microsoft Security Researcher CVE-2021-24113',
     linkedin: 'https://www.linkedin.com/in/deepanraj95/',
-    Portfolio: 'https://deepantechnoids.github.io/',
-    image: 'DEEPAN1.jpg'
+    youtube: 'https://www.youtube.com/channel/UCVmhGFK96iNIwh-g3dNbRYQ/videos',
+    github: 'https://github.com/TWILIGHTCLOUDCODERZ',
+    portfolio: 'https://deepantechnoids.github.io/',
+    image: 'https://github.com/user-attachments/assets/fe0f1a79-5103-4102-9183-f42689bd6704'
   },
   {
     name: 'Murugan Subramanian',
     role: 'Developer Lead',
     description: 'Azure - IAC',
-    linkedin: 'url.com',
-    image: '/assets/murugan.jpg'
+    linkedin: 'https://www.linkedin.com',
+    image: ''
   }
 ];
 
@@ -63,6 +65,36 @@ const Teams = () => {
                       >
                         <Linkedin className="h-5 w-5" />
                       </a>
+                      {member.youtube && (
+                        <a
+                          href={member.youtube}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-red-500 hover:text-red-400 transition-colors"
+                        >
+                          <Youtube className="h-5 w-5" />
+                        </a>
+                      )}
+                      {member.github && (
+                        <a
+                          href={member.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-300 hover:text-white transition-colors"
+                        >
+                          <Github className="h-5 w-5" />
+                        </a>
+                      )}
+                      {member.portfolio && (
+                        <a
+                          href={member.portfolio}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-green-500 hover:text-green-400 transition-colors"
+                        >
+                          <Globe className="h-5 w-5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -82,7 +114,7 @@ const Teams = () => {
             Interested in learning more about our services? Get in touch with our team.
           </p>
           <a
-            href="mailto:contact@example.com"
+            href="mailto:deepanrey@gmail.com"
             className="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             <Mail className="h-5 w-5 mr-2" />
