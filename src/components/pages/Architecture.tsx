@@ -168,7 +168,7 @@ const Architecture = () => {
           <div className="relative aspect-video rounded-lg overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5" />
             <img
-              src=""
+              src="https://github.com/user-attachments/assets/2e4f7b90-824a-470e-b3cf-fe343fc94477"
               alt="Azure Architecture Animation"
               className="w-full h-full object-contain rounded-lg"
             />
